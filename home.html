@@ -6,20 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="jobs.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <div style="margin-top:10px;margin-left:10px;margin-right:10px">
+    <div class="border">
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
           <a class="brand" href="home.html">jobs@brown</a>
           <ul class="nav">
             <li><a href="about.html">About</a></li>
           </ul>
+          <div class="btn-group pull-right">
+              <a href="home.html" class="btn btn-primary btn-lg active" role="button">JobFinder</a>
+              <a href="account.html" class="btn btn-primary btn-lg" role="button">MyAccount</a>
+              <a href="logout.html" class="btn btn-primary btn-lg" role="button">LogOut</a>
+          </div>
         </div>
       </div>
-      <h1>Hello, world!</h1>
+      <text class="header">Jobs@Brown</text>
+      <div class="highlight">
+        <form class="input-append" style="float:left">
+          <input type="text" name="searchtext" style="width:300px">
+          <button class="btn btn-danger" role="button">find a job</button>
+        </form>
+        <div id="search_options" class="collapse" style="clear:left;margin:10">
+          <h5>Advanced Search Options:</h5>
+          <text class="criteria" style="float:left"> wage >= </text>
+          <select style="float:left;width:100px">
+            <option value="9.00">$9.00</option>
+          </select>
+          <text class="criteria" style="clear:left;float:left"> hours/week from </text>
+          <select style="float:left;width:100px">
+            <option value="0.00">0.00</option>
+          </select>
+          <text class="criteria" style="float:left"> to </text>
+          <select style="float:left;width:100px">
+            <option value="168.00">168.00</option>
+          </select>
+          <text class="criteria" style="clear:left;float:left"> on-/off-campus </text>
+          <select style="float:left">
+            <option value="either">either</option>
+            <option value="on">on-campus</option>
+            <option value="off">off-campus</option>
+          </select>
+        </div>
+        <input id="hide/show" type="button" class="btn btn-default btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
+        </input>
+      </div>
     </div>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      function handleClick() {
+        this.value = (this.value == 'Show Advanced Search Options' ? 'Hide Advanced Search Options' : 'Show Advanced Search Options');
+      }
+      document.getElementById('hide/show').onclick = handleClick;
+    </script>
   </body>
 </html>

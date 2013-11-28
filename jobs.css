@@ -1,0 +1,34 @@
+/*!
+ * To override/customize bootstrap classes
+ */
+
+ .border {
+    margin-top:10px;
+    margin-left:10px;
+    margin-right:10px
+ }
+
+ .header {
+    margin-left:20px;
+    font-family:Didot;
+    font-size:140px;
+    font-style:italic;
+    line-height:120%;
+    color:rgb(216,0,0);
+    text-align:left;
+ }
+
+ .highlight {
+    position: absolute;
+    padding: 14px 20px 5px 20px;
+    margin-bottom: 14px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+}
+
+.criteria {
+    line-height:200%;
+    margin-left:10px;
+    margin-right:10px;
+}
