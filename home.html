@@ -26,32 +26,49 @@
       <text class="header">Jobs@Brown</text>
       <div class="highlight">
         <form class="input-append" style="float:left">
-          <input type="text" name="searchtext" style="width:300px">
+          <input type="text" name="searchtext" style="width:350px">
           <button class="btn btn-danger" role="button">find a job</button>
         </form>
         <div id="search_options" class="collapse" style="clear:left;margin:10">
           <h5>Advanced Search Options:</h5>
-          <text class="criteria" style="float:left"> wage >= </text>
-          <select style="float:left;width:100px">
-            <option value="9.00">$9.00</option>
-          </select>
-          <text class="criteria" style="clear:left;float:left"> hours/week from </text>
-          <select style="float:left;width:100px">
-            <option value="0.00">0.00</option>
-          </select>
-          <text class="criteria" style="float:left"> to </text>
-          <select style="float:left;width:100px">
-            <option value="168.00">168.00</option>
-          </select>
-          <text class="criteria" style="clear:left;float:left"> on-/off-campus </text>
-          <select style="float:left">
-            <option value="either">either</option>
-            <option value="on">on-campus</option>
-            <option value="off">off-campus</option>
-          </select>
+              <text class="criteria" style="float:left"> wage >= </text>
+              <select style="float:left;width:100px">
+                <option value="9.00">$9.00</option>
+              </select>
+            <text class="criteria" style="clear:left;float:left"> hours/week from </text>
+            <select style="float:left;width:100px">
+              <option value="0.00">0.00</option>
+            </select>
+            <text class="criteria" style="float:left"> to </text>
+            <select style="float:left;width:100px">
+              <option value="168.00">168.00</option>
+            </select>
+            <text class="criteria" style="clear:left;float:left"> on-/off-campus </text>
+            <select style="float:left">
+              <option value="either">either</option>
+              <option value="on">on-campus</option>
+              <option value="off">off-campus</option>
+            </select>
         </div>
         <input id="hide/show" type="button" class="btn btn-default btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
         </input>
+      </div>
+      <div class="higlight"> <!-- job description -->
+      </div>
+      <div class="highlight">
+        <h5>Popular Tags (click to add to search)</h5>
+        <div style="float:left;"> <!--- tag button row-->
+          <button class="btn btn-danger tag">tag</button>
+          <button class="btn btn-danger tag ">tag</button>
+          <button class="btn btn-danger tag ">tag</button>
+          <button class="btn btn-danger tag">tag</button>
+        </div>
+        <div style="clear:left;float:left;"> <!--- tag button row-->
+          <button class="btn btn-danger tag">tag</button>
+          <button class="btn btn-danger tag">tag</button>
+          <button class="btn btn-danger tag">tag</button>
+          <button class="btn btn-danger tag">tag</button>
+        </div>
       </div>
     </div>
     <script src="http://code.jquery.com/jquery.js"></script>
