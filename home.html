@@ -51,7 +51,7 @@
                 <option value="off">off-campus</option>
               </select>
           </div>
-          <input id="hide/show" type="button" class="btn btn-default btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
+          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
           </input>
         </div>
         <div class="highlight" style="float:left;clear:left">
@@ -112,7 +112,7 @@
             </a>
           </div>
       </div>
-      <div class="highlight" id="jobdetail" style="width:550px;margin-left:20px;position:fixed;left:522px;overflow-y:scroll;"> <!-- top was 216 job description -->
+      <div class="highlight" id="jobdetail" style="width:550px;margin-left:20px;position:fixed;left:522px;"> <!-- top was 216 job description -->
         <h3 style="float:left"><span style="color:red">{{Job Title}}</span></h3>
         <button class="btn btn-danger" style="float:left;margin:15px">Apply Here</button>
         <text class="detailheader">Job Description</text>
@@ -150,17 +150,18 @@
       document.getElementById('hide/show').onclick = handleClick;
 
       $(window).scroll(function() { 
-        if ($(jobdetail).is(':hover') === false) {
+        /*if ($(jobdetail).is(':hover') === false) {*/
           if ($(window).scrollTop() <= 216) { 
             $(jobdetail).offset({top: 230});
+            $(jobdetail).css({overflow: "hidden"});
           } else {
-            $(jobdetail).css({top: 0});
+            $(jobdetail).css({top: 0, bottom: 0, overflow: "scroll"});
           }
-        } else {
+       /* } else {
           var top = $(window).offset().top;
           $(window).scrollTop(top);
           //$(jobdetail).is()
-        }
+        }*/
       });
     </script>
   </body>
