@@ -18,7 +18,8 @@
           </ul>
           <div class="btn-group pull-right">
               <a href="home.html" class="btn btn-primary btn-lg active" role="button">JobFinder</a>
-              <a href="account.html" class="btn btn-primary btn-lg" role="button">MyAccount</a>
+              <a href="studentAccount.html" class="btn btn-primary btn-lg" role="button">MyAccount</a>
+              <a href="jobmail.html" class="btn btn-primary btn-lg" role="button">JobMail</a>
               <a href="logout.html" class="btn btn-primary btn-lg" role="button">LogOut</a>
           </div>
         </div>
@@ -50,25 +51,27 @@
                 <option value="on">on-campus</option>
                 <option value="off">off-campus</option>
               </select>
+
+              <text class="criteria" style="clear:left;float:left">Popular Tags (click to add to search)</text>
+              <div style="float:left;"> <!--- tag button row-->
+                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag ">{{tag}}</button>
+                <button class="btn btn-danger tag ">{{tag}}</button>
+                <button class="btn btn-danger tag">{{tag}}</button>
+              </div>
+              <div style="clear:left;float:left;"> <!--- tag button row-->
+                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag">{{tag}}</button>
+              </div>
+
           </div>
+          <p></p>
           <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
           </input>
         </div>
-        <div class="highlight" style="float:left;clear:left">
-          <h5>Popular Tags (click to add to search)</h5>
-          <div style="float:left;"> <!--- tag button row-->
-            <button class="btn btn-danger tag">{{tag}}</button>
-            <button class="btn btn-danger tag ">{{tag}}</button>
-            <button class="btn btn-danger tag ">{{tag}}</button>
-            <button class="btn btn-danger tag">{{tag}}</button>
-          </div>
-          <div style="clear:left;float:left;"> <!--- tag button row-->
-            <button class="btn btn-danger tag">{{tag}}</button>
-            <button class="btn btn-danger tag">{{tag}}</button>
-            <button class="btn btn-danger tag">{{tag}}</button>
-            <button class="btn btn-danger tag">{{tag}}</button>
-          </div>
-        </div>
+       
           <h3><span style="float:left;clear:left">Results : </span></h3>
           <text style="float:left;margin-left:237px;margin-top:12px">sort by</text>
           <select style="width:120px;float:left;margin-left:7px;margin-top:7px">
