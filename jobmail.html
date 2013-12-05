@@ -2,19 +2,79 @@
 <html>
 	<head>
 		<title>Jobs@Brown</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	    <link href="jobs.css" rel="stylesheet" media="screen">
+	    <link href="jobsiteHelpers.css" rel="stylesheet" media="screen">
+	    <script src="studentEmployment.js"></script>
+	    <script src="bootstrap.js"></script>
 	</head>
 	<body>
+		
+		<!--Tab bar at the top of page for internal navigation -->
+
+		<div class="border" style="position:relative;">
+	      <div class="navbar navbar-inverse">
+	        <div class="navbar-inner">
+	          <a class="brand" href="home.html">jobs@brown</a>
+	          <ul class="nav">
+	            <li><a href="about.html">About</a></li>
+	          </ul>
+	          <div class="btn-group pull-right">
+	              <a href="home.html" class="btn btn-primary btn-lg" role="button">JobFinder</a>
+	              <a href="studentAccount.html" class="btn btn-primary btn-lg" role="button">MyAccount</a>
+	              <a href="jobmail.html" class="btn btn-primary btn-lg active" role="button">JobMail</a>
+	              <a href="logout.html" class="btn btn-primary btn-lg" role="button">LogOut</a>
+	          </div>
+	        </div>
+	      </div>
 		<!-- JobMail-related recommendation refinements to go in JobMail file -->
 		<!--JobMail Finder button to turn finder on/off -->
-		<h3>JobMail Finder: On 	Off</option></h3>
+		
+		<text class="header" style="float:left;margin-bottom:15px">Jobs@Brown</text>
 
+		<div class="text" style="float:left;clear:left;margin-left:30px"> JobMail Finder: 
+			<div class="btn-group">
+				<label class="btn btn-primary active" onclick="jobmailNotifications()">On</label>
+				<label class="btn btn-default" onclick="jobMailNotifications()">Off</label>
+			</div>
+		</div>
+
+		
 		<!-- JobMail Tags to refine recommendations -->
-		<h3>JobMail Tags: <img src="http://iphone.livebuster.com/img/Bookmark.gif"></h3>
+		<div class="text" style="float:left;clear:left;margin-left:30px"> JobMail Tags:
+			<button class="btn buttonImage" data-toggle="button"><img src="http://iphone.livebuster.com/img/Bookmark.gif" style="height:15px;width:15px;margin-top:0px;padding:0px;border:0px"></button></text>
+		</div>
 		<!-- JobMail filters to refine recommendations-->
-		<h3>JobMail Filters:</h3>
+		<div class="text" style="float:left;clear:left;margin-left:30px"> <h3>JobMail Filters:</h3>
 		<p>Min. Wage (per hour):</p>
 		<p>Hours (per week):</p>
 		<p>Location:</p>
-		<p>Brown Ednorsed: </p>
+		<p>Brown Ednorsed: </p></div>
+		
+
+		<div class="tile jobMailTile">
+
+		</div>
+
+<!-- Pop-up window (modal) to be incorporated later-->
+		<!-- <div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
 	</body>
 </html>
