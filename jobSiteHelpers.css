@@ -52,6 +52,14 @@
 	color:#8A0808;
 }
 
+.jobMailTile{
+	margin-top:150px;
+	margin-left:350px;
+	position:absolute;
+	height:500px;
+	width:750px
+}
+
 .doubleColors{
 	margin:0px;
 	color:#8A0808;
@@ -65,4 +73,10 @@
 	width:15px;
 	margin-left:660px;
 	position:absolute;
+}
+
+.buttonImage{
+	padding:0px;
+	height:15px;
+	width:15px;
 }
