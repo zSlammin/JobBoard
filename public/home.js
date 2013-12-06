@@ -64,4 +64,18 @@ $(window).scroll(function() {
 function tagClick(tag) {
     var searchbar = document.getElementsByName('searchtext')[0];
     searchbar.value = searchbar.value + 'tag:"' + tag + '"; ';
+};
+
+function athletics() {
+	var joblist = $(jobList).children();
+	var listlen = joblist.length;
+	document.getElementsByName('searchtext')[0].value="";
+	for (var i=5;i < listlen;i++){
+		joblist[i].remove();
+	}
+	console.log($(joblist).offset().top);	
+	//$(window).scrollTop($(results).offset().top);
+	$('html,body').animate({
+        scrollTop: ($(joblist).offset().top)},
+        'medium');
 }
