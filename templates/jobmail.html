@@ -37,7 +37,7 @@
 		<text class="header" style="float:left;margin-bottom:15px;margin-top:75px">Jobs@Brown</text>		
 		
 		<!-- Mail Filter Tile-->
-		<div class="mailFilter">
+		<div style="background-color:green;display:block" class="mailFilter">
 			<div class="text" style="float:left;clear:left;margin-left:30px;margin-top:20px"> JobMail Finder: 
 			<div class="btn-group">
 				<button type="button" class="btn btn-default active">On</button>
@@ -125,47 +125,48 @@
 
 		</div>
 
-		
-		<!-- Static header for mail refinement-->
-		<div class="mailHeader" style"margin-right:330px">
+		<div style="background-color:red;border-style:solid;border-color:red; float:left; " id="mailstuff">
+			<!-- Static header for mail refinement-->
+			<div class="mailHeader" style="float:left;display:block">
 
-				<!--search bar-->
-				<div class="mailHeaderBox" style="height:25px">
-			        <form class="input-append" style="float:left">
-			          <input type="text" name="searchtext" style="width:450px">
-			          <button class="btn btn-default" role="button">Search</button>
-			        </form>
-		    	</div>
+					<!--search bar-->
+					<div class="mailHeaderBox" style="height:25px">
+				        <form class="input-append" style="float:left">
+				          <input type="text" name="searchtext" style="width:450px">
+				          <button class="btn btn-default" role="button">Search</button>
+				        </form>
+			    	</div>
 
-		    	
-					
-	    		<!--prev and next buttons-->
-				<ul class="pager" style="position:absolute;margin-top:60px;margin-left:5px">
-				  <li><a href="#"> Prev </a></li>
-				  <li><a href="#">Next</a></li>
-				</ul>
-				
-				<a href="#" style="position:absolute;margin-top:65px;left:330px">Inbox <span class="badge">42</span></a>
-
-				<!--dropdown menu-->
-				<div class="btn-group" style="position:absolute;margin-top:60px;right:10px">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filter/Sort <span class="caret"></span></button>
-					<ul class="dropdown-menu" role="menu">
-						<li><text>Filter by:</text></li>
-						<li><a href="#">Starred</a></li>
-						<li><a href="#">Brown Endorsed</a></li>
-						<li><a href="#">On-Campus</a></li>
-						<li><text>Sort by:</text></li>
-						<li><a href="#">Best Match</a></li>
-						<li><a href="#">Most Recent</a></li>
-						<li><a href="#">Highest Wage/a></li>							  
+			    	
+						
+		    		<!--prev and next buttons-->
+					<ul class="pager" style="position:absolute;margin-top:60px;margin-left:5px">
+					  <li><a href="#"> Prev </a></li>
+					  <li><a href="#">Next</a></li>
 					</ul>
-				</div>
-			
+					
+					<a href="#" style="position:absolute;margin-top:65px;left:330px">Inbox <span class="badge">42</span></a>
 
+					<!--dropdown menu-->
+					<div class="btn-group" style="position:absolute;margin-top:60px;right:10px">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filter/Sort <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><text>Filter by:</text></li>
+							<li><a href="#">Starred</a></li>
+							<li><a href="#">Brown Endorsed</a></li>
+							<li><a href="#">On-Campus</a></li>
+							<li><text>Sort by:</text></li>
+							<li><a href="#">Best Match</a></li>
+							<li><a href="#">Most Recent</a></li>
+							<li><a href="#">Highest Wage/a></li>							  
+						</ul>
+					</div>
+				
+
+			</div>
+
+			<div id="jobList" class="list-group" style="float:left;clear:left,top;overflow:scroll;margin-top:6px"></div>
 		</div>
-
-		<div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px"></div>
 
 		
 
