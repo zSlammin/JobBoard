@@ -7,6 +7,7 @@
     <!-- Bootstrap -->
     <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/public/jobs.css" rel="stylesheet" media="screen">
+    <script src="/public/home.js"></script>
   </head>
   <body>
     <div class="border" style="position:relative;">
@@ -80,39 +81,8 @@
                 <option value="lowest pay">lowest pay</option>
                 <option value="employer">employer</option>
           </select>
-          <div class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px">
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
-            <a href="#" class="list-group-item listbox">
-              <h4 class="list-group-item-heading">Here's a Job</h4>
-              <p class="list-group-item-text">{{Job Title}} || {{Pay}} || {{Employer}}</p>
-            </a>
+          <div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px">
+            
           </div>
       </div>
       <div class="highlight" id="jobdetail" style="width:550px;margin-left:20px;position:fixed;left:522px;top:216px"> <!-- top was 216 job description -->
