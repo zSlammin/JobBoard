@@ -19,6 +19,14 @@
     margin-bottom:20px;
 }
 
+.mailHeaderBox{
+	position:relative;
+	margin-bottom:15px;
+	width:760px;
+	float:left;
+	padding-right:30px;
+}
+
 .jobMailTile{
 	position:relative;
 	margin-left:332px;

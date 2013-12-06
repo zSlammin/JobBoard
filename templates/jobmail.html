@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Jobs@Brown</title>
+		<meta name="jobList" content="{{jobs}}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/public/jobs.css" rel="stylesheet" media="screen">
@@ -36,22 +37,89 @@
 		
 		<!-- Mail Filter Tile-->
 		<div class="mailFilter">
-			<div class="text" style="float:left;clear:left;margin-left:30px"> JobMail Finder: 
+			<div class="text" style="float:left;clear:left;margin-left:30px;margin-top:20px"> JobMail Finder: 
 			<div class="btn-group">
-				<label class="btn btn-primary active" onclick="jobmailNotifications()">On</label>
-				<label class="btn btn-default" onclick="jobMailNotifications()">Off</label>
+				<button type="button" class="btn btn-default active">On</button>
+				<button type="button" class="btn btn-default">Off</button>
 			</div>
 			
 			<!-- JobMail Tags to refine recommendations -->
-			<div class="text" style="float:left;clear:left;margin-left:30px;padding-bottom:15px"> JobMail Tags:
-				<button class="btn buttonImage" data-toggle="button"> <strong>+</str </button>
+			<div class="text" style="float:left;clear:left;margin-top:20px;padding-bottom:15px"> JobMail Tags:
+				<button class="btn" data-toggle="button"> <strong>+</strong></button>
 			</div>
 			<!-- JobMail filters to refine recommendations-->
-			<div class="text" style="float:left;clear:left;margin-left:30px"> <h3>JobMail Filters:</h3>
-				<p>Min. Wage (per hour):</p>
-				<p>Hours (per week):</p>
-				<p>Location:</p>
-				<p>Brown Ednorsed: </p></div>
+			<div class="text" style="float:left;clear:left"> <h3>JobMail Filters:</h3>
+				<div class="text" style="margin-bottom:20px">Min. Wage (per hour):
+					<div class="btn-group">
+					  <button type="button" class="btn btn-danger">$0</button>
+					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					    <span class="caret"></span>
+					    <span class="sr-only"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">Action</a></li>
+					    <li><a href="#">Another action</a></li>
+					    <li><a href="#">Something else here</a></li>
+					    <li class="divider"></li>
+					    <li><a href="#">Separated link</a></li>
+					  </ul>
+					</div>
+					</text>
+				</div>
+
+				<div class="text" style="margin-bottom:20px">Max Hours (per week):
+					<div class="btn-group">
+					  <button type="button" class="btn btn-danger">8</button>
+					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					    <span class="caret"></span>
+					    <span class="sr-only"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">Action</a></li>
+					    <li><a href="#">Another action</a></li>
+					    <li><a href="#">Something else here</a></li>
+					    <li class="divider"></li>
+					    <li><a href="#">Separated link</a></li>
+					  </ul>
+					</div>
+					</text>
+				</div>
+
+				<div class="text" style="margin-bottom:20px">Location:
+					<div class="btn-group">
+					  <button type="button" class="btn btn-danger">On-Campus</button>
+					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					    <span class="caret"></span>
+					    <span class="sr-only"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">Action</a></li>
+					    <li><a href="#">Another action</a></li>
+					    <li><a href="#">Something else here</a></li>
+					    <li class="divider"></li>
+					    <li><a href="#">Separated link</a></li>
+					  </ul>
+					</div>
+					</text>
+				</div>
+
+				<div class="text" style="margin-bottom:20px">Brown Ednorsed:
+					<div class="btn-group">
+					  <button type="button" class="btn btn-danger">Yes</button>
+					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					    <span class="caret"></span>
+					    <span class="sr-only"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#">Action</a></li>
+					    <li><a href="#">Another action</a></li>
+					    <li><a href="#">Something else here</a></li>
+					    <li class="divider"></li>
+					    <li><a href="#">Separated link</a></li>
+					  </ul>
+					</div>
+					</text>
+				</div>
 			</div>
 
 		</div>
@@ -60,48 +128,49 @@
 		<!-- Static header for mail refinement-->
 		<div class="mailHeader" style"margin-right:330px">
 
-				<!--search engine-->
-				<div class="row" style="float:left">
-				  <div class="col-lg-6">
-				    <div class="input-group">
-				      <input type="text" class="form-control">
-				      <span class="input-group-btn">
-				        <button class="btn btn-default" type="button">Search</button>
-				      </span>
-				    </div><!-- /input-group -->
-				  </div><!-- /.col-lg-6 -->
-				</div><!-- /.row -->
+				<!--search bar-->
+				<div class="mailHeaderBox" style="height:25px">
+			        <form class="input-append" style="float:left">
+			          <input type="text" name="searchtext" style="width:450px">
+			          <button class="btn btn-default" role="button">Search</button>
+			        </form>
+		    	</div>
 
-				<!--inbox cool -->
-				<p><a href="#" style="float:right">Inbox <span class="badge">42</span></a></p>
-
-				<!--prev and next buttons-->
-				<ul class="pager" style="float:bottom;float:left">
-				  <li><a href="#">Previous</a></li>
+		    	
+					
+	    		<!--prev and next buttons-->
+				<ul class="pager" style="position:absolute;margin-top:60px;margin-left:5px">
+				  <li><a href="#"> Prev </a></li>
 				  <li><a href="#">Next</a></li>
 				</ul>
+				
+				<a href="#" style="position:absolute;margin-top:65px;left:330px">Inbox <span class="badge">42</span></a>
 
 				<!--dropdown menu-->
-				<div class="btn-group" style="float:bottom;float:right">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span>
-					</button>
+				<div class="btn-group" style="position:absolute;margin-top:60px;right:10px">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filter/Sort <span class="caret"></span></button>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Action</a></li>
-					    <li><a href="#">Another action</a></li>
-					    <li><a href="#">Something else here</a></li>
-					    <li class="divider"></li>
-					    <li><a href="#">Separated link</a></li>
+						<li><text>Filter by:</text></li>
+						<li><a href="#">Starred</a></li>
+						<li><a href="#">Brown Endorsed</a></li>
+						<li><a href="#">On-Campus</a></li>
+						<li><text>Sort by:</text></li>
+						<li><a href="#">Best Match</a></li>
+						<li><a href="#">Most Recent</a></li>
+						<li><a href="#">Highest Wage/a></li>							  
 					</ul>
 				</div>
+			
 
-			</div>
+		</div>
+
+		<div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px">
+          </div>
 
 		<div class="jobMailTile" style="position:relative;border:2px solid black;padding-top:0px;padding-right:0px;padding-left:0px">
 
-			<!-- header with mail filters/search/navigation -->
 
-			<span class="glyphicon glyphicon-arrow-left"></span>
-			<span class="glyphicon glyphicon-arrow-right"></span>
+
 			<!--nav tab bars-->
 			<ul class="nav nav-tabs">
 			  <li class="active"><a href="#">Home</a></li>
