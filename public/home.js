@@ -11,7 +11,7 @@ window.addEventListener('load', function(){
 		var title = vals[1];
 		var hours = vals[2];
 		var rate = vals[3];
-		var entry = '<a #href="#" id="'+ id +'"" class="list-group-item listbox"><h4 class="list-group-item-heading">Here\'s a Job</h4><p class="list-group-item-text">' +title +' || '+hours+' || '+rate+'</p></a>';
+		var entry = '<a #href="#" id="'+ id +'"" class="list-group-item listbox"><h4 class="list-group-item-heading">'+title+'</h4><p class="list-group-item-text">'+hours+' hours per week || '+rate+'</p></a>';
 		$('#jobList').append(entry);
 	}
 	$(".list-group-item").click(function(){
