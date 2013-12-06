@@ -6,6 +6,7 @@
 	    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	    <link href="/public/jobs.css" rel="stylesheet" media="screen">
 	    <link href="/public/jobsiteHelper.css" rel="stylesheet" media="screen">
+	    <script src="/public/accountHelpers.js"></script>
 	</head>
 
 	<body>
@@ -39,12 +40,12 @@
 
 	 <div class="tile" style="float:left;width:300px;clear:left;margin-left:50px">
        
-        	<h3 style="color:#508FE1"> Johnny's Profile <h3>
+        	<h3 style="color:black"> Johnny's Profile <h3>
         	<div class="profPic">
 				<img style="height:240px;width:240px;margin-top:5px;margin-left:5px" src="https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/1475885_10151718204156853_117853121_n.jpg">
 			</div>
 			<div style="float:right">
-				<text style="font-size:12pt;font-weight:normal"> Edit Profile  <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></text>
+				<text style="font-size:12pt;font-weight:normal"> Edit Profile <button class="btn btn-default" style="shadow:0px"> <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button></text>
 			</div>
 
 		<div class="doubleColors">
@@ -76,45 +77,79 @@
 		<p style="text-indent:35px;margin-top:20px;color:black"> Word</p>
 	</div>
 -->
-		<div class="tile right_tile">
-			<div class="bottomBorder">
-				<img class="editPencil" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png">
-				<div class="accountCategoryTitles">
-					<text>Skills and Certifications</text>
+
+	<div class="tile right_tile">
+		
+		
+			<button onclick="experienceEdit()" class="btn btn-default" style="float:right;margin-top" > <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
+		<div class="bottomBorder">
+			<div class="accountCategoryTitles">
+				<text>Experience</text>
+			</div>
+		</div>
+		<p id="experience">
+			<div id='changes2'>
+				<div id='changes1'>
+					<p style="margin-top:20px;color:black"><b>Brown Group Tutor (2011 – Present)</b></p>
+					<p style="color:black;text-indent:30px">Instruct underclassmen in various math, statistics and economics courses. Tutor both individuals and groups of students.</p> 
+
+					<p style="margin-top:20px;color:black"><b>The Princeton Review, SAT Instructor (Summer 2010)</b></p>
+					<p style="color:black;text-indent:30px">Served as a classroom instructor and private tutor for this national test preparation company. Completed a rigorous certification/training program led by Princeton Review professionals. Led SAT prep classes and provided private instruction to students in the Bronx, NY.</p> 
 				</div>
 			</div>
-			<p style="text-indent:35px;margin-top:20px;color:black"> </p>
+		</p>
+
+	</div>
+
+		<div class="tile right_tile">
+			<button class="btn btn-default" style="shadow:0px;float:right;top:0px" onclick="editSkills()"> <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
+ 			<div class="bottomBorder">
+				<div class="accountCategoryTitles">
+					<text>Skills and Certificates</text>
+				</div>
+			</div>
+			<p id="skills">
+				
+			<table class="table" border="0" id="tbl">
+				<!-- row 1-->
+				<div id="junk">
+					<tr>
+						<td><text id="a">Red Cross</text></td>
+						<td><text id="b">EMT</text></td>
+						<td><text id="c">Web Design</text></td>
+						<td><text id="d"></text></td>
+					</tr>
+					<!-- row 2-->
+					<tr>
+						<td><text id="e">Video Production</text></td>
+						<td><text id="f">Lifeguard</text></td>
+						<td><text id="g"></text></td>
+						<td><text id="h"></text></td>
+					</tr>
+					<!-- row 3-->
+					<tr>
+						<td><text id="i">Graphic Design</text></td>
+						<td><text id="j">iOS Development</text></td>
+						<td><text id="k"></text></td>
+						<td><text id="l"></text></td>
+					</tr>
+				</div> 
+			</table>
+
+			</p>
 			
-				<TEXTAREA NAME="Skills" ROWS=3 COLS=2000 >
-				</TEXTAREA>
 
 		</div>
 
 		<div class="tile right_tile">
- 			<div class="bottomBorder">
- 				<img class="editPencil" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png">
+			<button class="btn btn-default" style="float:right;margin-top"> <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
+			<div class="bottomBorder">
 				<div class="accountCategoryTitles">
 					<text>References</text>
 				</div>
 			</div>
-			<p style="text-indent:35px;margin-top:20px;color:black"> </p>
-			
-			<TEXTAREA NAME="References" ROWS=3 COLS=2000 >
-			hi boo
-			</TEXTAREA>
-		</div>
-
-		<div class="tile right_tile">
-			<div class="bottomBorder">
-				<img class="editPencil" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png">
-				<div class="accountCategoryTitles">
-					<text>Previous Experience</text>
-				</div>
-			</div>
-			<p style="text-indent:35px;margin-top:20px;color:black"> </p>
-			
-			<TEXTAREA NAME="Experience" ROWS=3 COLS=2000 >
-			</TEXTAREA>
+			<p style="text-style:strong;margin-top:10px">Lawrence Gibbs, Research Institute of Dakota</p>
+			<p style="text-indent:35px;margin-top:20px;color:black"> Johnny worked for me as an intern in the summer of '69. It was the best of times and the worst of times, but not both. He is very smart and engaging and whatnot. Sometimes he would pretend to do work and would look at me to see if I noticed. Even though I always did, I did not mind because I was slacking off myself. This is not a good recommendation, but it takes up a lot of space and looks pretty. I am an advocate of aesthetics. Hurray UI. Hurray Johnny!</p>
 		</div>
 
 	</body>

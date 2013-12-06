@@ -41,7 +41,7 @@
 
 .mailHeader{
 	position:relative;
-	margin-left:332px;
+	right:0px;
 	border-right: 2px solid;
 	border:2px solid;
 	border-bottom: 0px;
@@ -53,10 +53,10 @@
 }
 
 .mailFilter{
-	position:absolute;
-	margin-top:234px;
+	position:relative;
+	margin-top:250px;
 	margin-left:30px;
-	height:500px;
+	height:300px;
 	width:300px;
 	border:2px solid;
 	border-right:0px;
@@ -74,15 +74,16 @@
 }
 
 .bottomBorder{
-	border-bottom: solid #508FE1;
+	border-bottom: solid rgb(216,0,0);
 	margin-right: 15px;
 	margin-left: 15px;
 	margin-top: 10px;
 	width:675px;
+	padding-bottom: 7px;
 }
 
 .smallBottomBorder{
-	border-bottom: solid #508FE1;
+	border-bottom: solid rgb(216,0,0);
 	margin-right: 15px;
 	margin-left: 15px;
 	margin-top: 10px;
@@ -92,12 +93,12 @@
 .accountCategoryTitles{
 	font-size: 14pt;
 	font-style: bold;
-	color:#508FE1;
+	color:rgb(216,0,0);
 }
 
 .doubleColors{
 	margin:0px;
-	color:#508FE1;
+	color:rgb(216,0,0);
 	font-size:12pt;
 	clear:right;
 	overflow:ellipsis;
