@@ -93,3 +93,7 @@ function athletics() {
         scrollTop: ($(joblist).offset().top)},
         'medium');
 }
+
+function applynow() {
+	window.open("https://studentemployment.brown.edu/JobX_Apply.aspx?JobId=102");
+}

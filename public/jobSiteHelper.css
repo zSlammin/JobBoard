@@ -40,11 +40,9 @@
 }
 
 .mailHeader{
+	margin-top:0px;
 	position:relative;
 	margin-left:15px;
-	border-right: 2px solid;
-	border:2px solid;
-	border-bottom: 2px solid;
 	height:100px;
 	width:479px;
 	float:left;
@@ -58,8 +56,6 @@
 	margin-top:0px;
 	margin-left:20px;
 	width:300px;
-	border:2px solid;
-	border-right:0px;
 	overflow:auto;
 }
 
