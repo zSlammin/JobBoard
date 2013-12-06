@@ -36,10 +36,10 @@
       <text class="header" style="float:left;margin-top:75px">Jobs@Brown</text>
       <div style="margin-right:10px;overflow:auto;float:left;clear:left;width:440"> <!--left side -->
         <div class="highlight" style="float:left;width:450px">
-          <form class="input-append" style="float:left">
+          <div class="input-append" style="float:left">
             <input type="text" name="searchtext" style="width:350px">
-            <button class="btn btn-danger" role="button">find a job</button>
-          </form>
+            <button class="btn btn-danger" onclick="athletics()">find a job</button>
+          </div>
           <div id="search_options" class="collapse" style="clear:left;margin:10">
             <h5>Advanced Search Options:</h5>
                 <text class="criteria" style="float:left"> wage >= </text>
@@ -77,19 +77,20 @@
 
           </div>
           <p></p>
-          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options" onclick="handleclick()">
+          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options" onclick="handleClick()">
           </input>
         </div>
-       
-          <h3 style="color:#8A0808"><span style="float:left;clear:left;margin-left:20px;margin-top:25px"> Results : </span></h3>
-          <text style="float:left;margin-left:212px;margin-top:35px">sort by:</text>
-          <select style="width:120px;float:left;margin-left:7px;margin-top:30px">
-                <option value="start date">most hours</option>
-                <option value="highest pay">least hours</option>
-                <option value="lowest pay">highest pay</option>
-                <option value="employer">lowest pay</option>
-          </select>
-          <div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px">
+          <div style="float:left;clear:left;margin-left:20px" id="results">
+            <h3 style="color:#8A0808;float:left"><span id="results" style="float:left;"> Results   </span></h3>
+            <text style="float:left;margin-top: 21px;margin-left: 224px;">sort by:</text>
+            <select style="width:120px;float:left;margin-top: 16px;margin-left: 7px;">
+                  <option value="start date">most hours</option>
+                  <option value="highest pay">least hours</option>
+                  <option value="lowest pay">highest pay</option>
+                  <option value="employer">lowest pay</option>
+            </select>
+          </div>
+          <div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px;margin-bottom:30px">
           </div>
       </div>
       <div class="highlight" id="jobdetail" style="margin-left:20px;position:fixed;left:522px;top:217px;right:0px"> <!-- top was 216 job description -->
