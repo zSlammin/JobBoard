@@ -11,22 +11,26 @@
     <script src="/public/home.js"></script>
   </head>
   <body>
-    <div class="border" style="position:relative;">
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <a class="brand" href="home.html">jobs@brown</a>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background:black"role="naviagtion">
+      <div class="border" style="position:relative">
+        <div class="navbar-header">
           <ul class="nav">
+            <li><a href="home.html">jobs@Brown</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
-          <div class="btn-group pull-right">
-              <a href="home.html" class="btn btn-primary btn-lg active" role="button">JobFinder</a>
-              <a href="studentAccount.html" class="btn btn-primary btn-lg" role="button">MyAccount</a>
-              <a href="jobmail.html" class="btn btn-primary btn-lg" role="button">JobMail</a>
-              <a href="logout.html" class="btn btn-primary btn-lg" role="button">LogOut</a>
-          </div>
+        </div>
+
+        <div class="nav navbar-nav pull-right" style="position:relative">
+          <ul class="nav">
+            <li><a href="home.html">JobFinder</a></li>
+            <li><a href="studentAccount.html">MyAccount</a></li>
+            <li class="active"><a href="jobmail.html">JobMail</a></li>
+            <li><a href="logout.html">LogOut</a></li>
+          </ul>
         </div>
       </div>
-      <text class="header" style="float:left">Jobs@Brown</text>
+    </div>
+      <text class="header" style="float:left;margin-top:75px">Jobs@Brown</text>
       <div style="margin-right:10px;overflow:auto;float:left;clear:left;width:440"> <!--left side -->
         <div class="highlight" style="float:left;width:450px">
           <form class="input-append" style="float:left">
