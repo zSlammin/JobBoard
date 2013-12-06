@@ -8,6 +8,8 @@
     <!-- Bootstrap -->
     <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/public/jobs.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
     <script src="/public/home.js"></script>
   </head>
   
@@ -43,14 +45,105 @@
                 <text class="criteria" style="float:left"> wage >= </text>
                 <select style="float:left;width:100px">
                   <option value="9.00">$9.00</option>
+                  <option value="10.00">$10.00</option>
+                  <option value="11.00">$11.00</option>
+                  <option value="12.00">$12.00</option>
+                  <option value="13.00">$13.00</option>
+                  <option value="14.00">$14.00</option>
+                  <option value="15.00">$15.00</option>
+                  <option value="16.00">$16.00</option>
+                  <option value="17.00">$17.00</option>
+                  <option value="18.00">$18.00</option>
+                  <option value="19.00">$19.00</option>
+                  <option value="20.00">$20.00</option>
                 </select>
               <text class="criteria" style="clear:left;float:left"> hours/week from </text>
               <select style="float:left;width:100px">
                 <option value="0.00">0.00</option>
+                <option value="1.00">1.00</option>
+                <option value="2.00">2.00</option>
+                <option value="3.00">3.00</option>
+                <option value="4.00">4.00</option>
+                <option value="5.00">5.00</option>
+                <option value="6.00">6.00</option>
+                <option value="7.00">7.00</option>
+                <option value="8.00">8.00</option>
+                <option value="9.00">9.00</option>
+                <option value="10.00">10.00</option>
+                <option value="11.00">11.00</option>
+                <option value="12.00">12.00</option>
+                <option value="13.00">13.00</option>
+                <option value="14.00">14.00</option>
+                <option value="15.00">15.00</option>
+                <option value="16.00">16.00</option>
+                <option value="17.00">17.00</option>
+                <option value="18.00">18.00</option>
+                <option value="19.00">19.00</option>
+                <option value="20.00">20.00</option>
+                <option value="21.00">21.00</option>
+                <option value="22.00">22.00</option>
+                <option value="23.00">23.00</option>
+                <option value="24.00">24.00</option>
+                <option value="25.00">25.00</option>
+                <option value="26.00">26.00</option>
+                <option value="27.00">27.00</option>
+                <option value="28.00">28.00</option>
+                <option value="29.00">29.00</option>
+                <option value="30.00">30.00</option>
+                <option value="31.00">31.00</option>
+                <option value="32.00">32.00</option>
+                <option value="33.00">33.00</option>
+                <option value="34.00">34.00</option>
+                <option value="35.00">35.00</option>
+                <option value="36.00">36.00</option>
+                <option value="37.00">37.00</option>
+                <option value="38.00">38.00</option>
+                <option value="39.00">39.00</option>
+                <option value="40.00">40.00</option>
               </select>
               <text class="criteria" style="float:left"> to </text>
               <select style="float:left;width:100px">
-                <option value="168.00">168.00</option>
+                <option value="0.00">0.00</option>
+                <option value="1.00">1.00</option>
+                <option value="2.00">2.00</option>
+                <option value="3.00">3.00</option>
+                <option value="4.00">4.00</option>
+                <option value="5.00">5.00</option>
+                <option value="6.00">6.00</option>
+                <option value="7.00">7.00</option>
+                <option value="8.00">8.00</option>
+                <option value="9.00">9.00</option>
+                <option value="10.00">10.00</option>
+                <option value="11.00">11.00</option>
+                <option value="12.00">12.00</option>
+                <option value="13.00">13.00</option>
+                <option value="14.00">14.00</option>
+                <option value="15.00">15.00</option>
+                <option value="16.00">16.00</option>
+                <option value="17.00">17.00</option>
+                <option value="18.00">18.00</option>
+                <option value="19.00">19.00</option>
+                <option selected="true" value="20.00">20.00</option>
+                <option value="21.00">21.00</option>
+                <option value="22.00">22.00</option>
+                <option value="23.00">23.00</option>
+                <option value="24.00">24.00</option>
+                <option value="25.00">25.00</option>
+                <option value="26.00">26.00</option>
+                <option value="27.00">27.00</option>
+                <option value="28.00">28.00</option>
+                <option value="29.00">29.00</option>
+                <option value="30.00">30.00</option>
+                <option value="31.00">31.00</option>
+                <option value="32.00">32.00</option>
+                <option value="33.00">33.00</option>
+                <option value="34.00">34.00</option>
+                <option value="35.00">35.00</option>
+                <option value="36.00">36.00</option>
+                <option value="37.00">37.00</option>
+                <option value="38.00">38.00</option>
+                <option value="39.00">39.00</option>
+                <option value="40.00">40.00</option>
               </select>
               <text class="criteria" style="clear:left;float:left"> on-/off-campus </text>
               <select style="float:left">
@@ -61,21 +154,21 @@
 
               <text class="criteria" style="clear:left;float:left">Popular Tags (click to add to search)</text>
               <div style="float:left;"> <!--- tag button row-->
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag ">{{tag}}</button>
-                <button class="btn btn-danger tag ">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag" value="tutoring" onclick="tagClick('tutoring')">Tutoring</button>
+                <button class="btn btn-danger tag" value="childcare" onclick="tagClick('childcare')">Childcare</button>
+                <button class="btn btn-danger tag" value="media" onclick="tagClick('media')">Media Tech</button>
+                <button class="btn btn-danger tag" value="athletics" onclick="tagClick('athletics')">Athletics</button>
               </div>
               <div style="clear:left;float:left;"> <!--- tag button row-->
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag" value="food" onclick="tagClick('food')">Food Service</button>
+                <button class="btn btn-danger tag" value="web dev" onclick="tagClick('web dev')">Web Dev</button>
+                <button class="btn btn-danger tag" value="help desk" onclick="tagClick('help desk')">Help Desk</button>
+                <button class="btn btn-danger tag" value="research" onclick="tagClick('research')">Research</button>
               </div>
 
           </div>
           <p></p>
-          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
+          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options" onclick="handleclick()">
           </input>
         </div>
        
@@ -90,57 +183,34 @@
           <div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px">
           </div>
       </div>
-      <div class="highlight" id="jobdetail" style="margin-left:20px;position:fixed;left:522px;top:216px;right:0px"> <!-- top was 216 job description -->
+      <div class="highlight" id="jobdetail" style="margin-left:20px;position:fixed;left:522px;top:217px;right:0px"> <!-- top was 216 job description -->
         <h3 style="float:left"><span style="color:red">{{Job Title}}</span></h3>
         <button class="btn btn-danger" style="float:left;margin:15px">Apply Here</button>
         <text class="detailheader">Job Description</text>
-        <text class="detailtext">{{description}} Ensure the safety and well-being of individuals using the pool and aquatic facility. Prevent, recognize and respond to aquatic/first aid emergencies if required. Enforce all aquatic facility safety policies, rules, and regulations in a professional manner. Interact with patrons in a positive, cooperative, professional and customer service oriented manner. Assist with maintaining the neatness and cleanliness of the pool area where needed. Assist with facility needs as assigned by supervisor. Shifts at the Katherine Moran Coleman Aquatic Center are subject to change. Tentative shifts available are between 5:03am-11:00pm on weekdays and 7:00am-8:00pm on weekends</text>
+        <text id="JobDescription" class="detailtext">{{description}} Ensure the safety and well-being of individuals using the pool and aquatic facility. Prevent, recognize and respond to aquatic/first aid emergencies if required. Enforce all aquatic facility safety policies, rules, and regulations in a professional manner. Interact with patrons in a positive, cooperative, professional and customer service oriented manner. Assist with maintaining the neatness and cleanliness of the pool area where needed. Assist with facility needs as assigned by supervisor. Shifts at the Katherine Moran Coleman Aquatic Center are subject to change. Tentative shifts available are between 5:03am-11:00pm on weekdays and 7:00am-8:00pm on weekends</text>
         <text class="detailheader">Job Requirements</text>
-        <text class="detailtext">{{Requirements}} Must have current American Red Cross Lifeguard, First Aid, CPR/AED Pro, and Emergency Oxygen Certifications. Must be able to work a minimum of 9 hours on a weekly basis.</text>
+        <text id="JobRequirements" class="detailtext">{{Requirements}} Must have current American Red Cross Lifeguard, First Aid, CPR/AED Pro, and Emergency Oxygen Certifications. Must be able to work a minimum of 9 hours on a weekly basis.</text>
         <text class="detailheader">Work Location</text>
-        <text class="detailtext">{{location}}</text>
+        <text id= "WorkLocation" class="detailtext">Nelson Aquatic Center</text>
         <text class="detailheader">Number of Openings</text>
-        <text class="detailtext">{{openings}}</text>
+        <text id="Openings" class="detailtext">15</text>
         <text class="detailheader">Start Date</text>
-        <text class="detailtext">{{start}}</text>
+        <text id="StartDate" class="detailtext">ASAP</text>
         <text class="detailheader">End Date</text>
-        <text class="detailtext">{{end}}</text>
+        <text id="EndDate" class="detailtext">May</text>
         <text class="detailheader">Date Posted</text>
-        <text class="detailtext">{{posted}}</text>
+        <text id="DatePosted" class="detailtext">Dec 1</text>
         <text class="detailheader">Primary Contact</text>
-        <text class="detailtext">{{contact}}</text>
+        <text id="PrimaryContact" class="detailtext">Joey Carberry</text>
         <text class="detailheader">Email Address</text>
-        <text class="detailtext">{{email}}</text>
+        <text id="EmailAddress" class="detailtext">j.carberry@soundcloud.edu</text>
         <text class="detailheader">Phone Number</text>
-        <text class="detailtext">{{number}}</text>
+        <text id="PhoneNumber" class="detailtext">617-867-5309</text>
         <text class="detailheader">Employer</text>
-        <text class="detailtext">{{employer}}</text>
+        <text id="Employer" class="detailtext">Christina Paxon</text>
         <text class="detailheader">Job Type</text>
-        <text class="detailtext">{{on/off campus}}</text>
+        <text id="JobType" class="detailtext">On Campus</text>
       </div>
     </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-      function handleClick() {
-        this.value = (this.value == 'Show Advanced Search Options' ? 'Hide Advanced Search Options' : 'Show Advanced Search Options');
-      }
-      document.getElementById('hide/show').onclick = handleClick;
-
-      $(window).scroll(function() { 
-        /*if ($(jobdetail).is(':hover') === false) {*/
-          if ($(window).scrollTop() <= 216) { 
-            $(jobdetail).offset({top: 230});
-            $(jobdetail).css({overflow: "hidden"});
-          } else {
-            $(jobdetail).css({top: 0, bottom: 0, overflow: "scroll"});
-          }
-       /* } else {
-          var top = $(window).offset().top;
-          $(window).scrollTop(top);
-          //$(jobdetail).is()
-        }*/
-      });
-    </script>
   </body>
 </html>
