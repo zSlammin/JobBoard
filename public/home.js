@@ -50,6 +50,7 @@ window.addEventListener('load', function(){
 				$("#JobTitle").text(data.Title);
 				$("#JobTitle").css("color","red");
 
+
 			}else{
 				alert("job info request failed");
 			}
