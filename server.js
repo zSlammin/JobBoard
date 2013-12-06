@@ -9,7 +9,7 @@ app.engine('html', engines.hogan);
 app.set('views', __dirname + "/templates");
 app.use('/public', express.static(__dirname + '/public'));
 
-app.get('/app', function(request, response){
+app.get('/', function(request, response){
 	//get information for top var in list. Populate variables based on that.
 	var jobsList = new Array();
 	var q = "SELECT * FROM jobs";
@@ -27,7 +27,7 @@ app.get('/app', function(request, response){
 			var row = jobsList[j];
 			jobStr+=row.title +row.hours + row.rate+"|";
 		}
-		response.render("standin.html", {variable: "Title", othVariable: "CONTENT", jobs: jobStr });
+		response.render("home.html", {variable: "Title", othVariable: "CONTENT", jobs: jobStr });
 	});
 	
 });
