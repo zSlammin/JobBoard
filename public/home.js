@@ -37,6 +37,9 @@ window.addEventListener('load', function(){
 				$("#JobType").text(data.JobType);
 				$("#JobRequirements").text(data.JobRequirements);
 				$("#Openings").text(data.Openings);
+				$("#JobTitle").text(data.Title);
+				$("#JobTitle").css("color","red");
+
 			}else{
 				alert("job info request failed");
 			}
