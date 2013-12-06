@@ -39,11 +39,11 @@ function handleClick() {
 }
 
 $(window).scroll(function() { 
-    if ($(window).scrollTop() <= 216) { 
-        $(jobdetail).offset({top: 230});
+    if ($(window).scrollTop() <= 156) { 
+        $(jobdetail).offset({top: 231});
         $(jobdetail).css({overflow: "hidden"});
     } else {
-        $(jobdetail).css({top: 0, bottom: 0, overflow: "scroll"});
+        $(jobdetail).css({top: 60, bottom: 0, overflow: "scroll"});
     }
 });
 
