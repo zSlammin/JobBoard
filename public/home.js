@@ -20,7 +20,7 @@ window.addEventListener('load', function(){
 			joblist[i].style.backgroundColor = "white";
 		}
 		this.style.backgroundColor = "#FF6E6E";
-		$(jobdetail).animate({scrollTop: 0}, 'medium');
+		$(jobdetail).animate({scrollTop: 0}, 'medium');	
 		var reqJobInfo = new XMLHttpRequest();
 		var url = '/job/' +this.id;
 		reqJobInfo.open('GET', '/job/' + this.id, true);
