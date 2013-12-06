@@ -47,13 +47,11 @@ app.get('/job/:id', function(request, response){
 	var jobInfo = infoConn.query(q);
 	var json;
 	jobInfo.on('row', function(row){
-		console.log("row found for " + id);
 		json = {PhoneNumber: row.PhoneNumber, WorkLocation: row.WorkLocation, EmailAddress:row.EmailAddress, PrimaryContact: row.PrimaryContact, EndDate: row.EndDate, StartDate: row.StartDate, TimeFrame: row.TimeFrame, HourlyRate: row.HourlyRate, Hours: row.Hours, Openings: row.Openings, ID: row.ID, Title:row.Title, Employer: row.Employer, DatePosted: row.DatePosted, Category: row.Category, JobType: row.JobType, JobDescription: row.JobDescription, JobRequirements: row.JobRequirements};
 	})
 	
 	//this json will be constructed out of things received from jobs database and sent
 	jobInfo.on('end', function(){
-		console.log(json);
 		response.json(json);
 	});
 	

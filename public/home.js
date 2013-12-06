@@ -15,17 +15,28 @@ window.addEventListener('load', function(){
 		$('#jobList').append(entry);
 	}
 	$(".list-group-item").click(function(){
-		console.log("clicked" + this.id)
 		var reqJobInfo = new XMLHttpRequest();
 		var url = '/job/' +this.id;
 		reqJobInfo.open('GET', '/job/' + this.id, true);
-		console.log("preload");
 		reqJobInfo.addEventListener('load', function(e){
-			console.log("loaded");
 			if(reqJobInfo.status=200){
 				var content = reqJobInfo.responseText;
 				var data = JSON.parse(content);
-				console.log(data.stuff);
+				$("#JobDescription").text(data.JobDescription);
+				$("#PhoneNumber").text(data.PhoneNumber);
+				$("#WorkLocation").text(data.WorkLocation);
+				$("#EmailAddress").text(data.EmailAddress);
+				$("#PrimaryContact").text(data.PrimaryContact);
+				$("#EndDate").text(data.EndDate);
+				$("#StartDate").text(data.StartDate);
+				$("#TimeFrame").text(data.TimeFrame);
+				$("#HourlyRate").text(data.HourlyRate);
+				$("#Hours").text(data.Hours);
+				$("#DatePosted").text(data.DatePosted);
+				$("#Employer").text(data.Employer);
+				$("#JobType").text(data.JobType);
+				$("#JobRequirements").text(data.JobRequirements);
+				$("#Openings").text(data.Openings);
 			}else{
 				alert("job info request failed");
 			}
