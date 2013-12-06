@@ -16,14 +16,13 @@
     line-height:120%;
     color:rgb(216,0,0);
     text-align:left;
-    margin-top:65px;
+    margin-top:1px;
     float:left;
 }
 
 .highlight {
     overflow: auto;
     position: relative;
-    width: 450px;
     padding: 17px 20px 17px 20px;
     margin: 15px;
     background-color: #f7f7f9;
