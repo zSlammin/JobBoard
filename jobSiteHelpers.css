@@ -1,0 +1,82 @@
+.profPic
+{
+	width:250px;
+	height:250px;
+	padding:0px;
+	background-color:white;
+	margin: auto;
+	vertical-align: middle;
+}
+
+.tile {
+    overflow: auto;
+    position: absolute;
+    width: 450px;
+    padding: 5px 20px 17px 20px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    margin-bottom:20px;
+}
+
+.jobSuggestions{
+	height:400px;
+}
+
+.right_tile {
+	width: 700px;
+	color: #900000;
+	margin-left: 420px;
+	position:relative;
+}
+
+.bottomBorder{
+	border-bottom: solid #8A0808;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 10px;
+	width:675px;
+}
+
+.smallBottomBorder{
+	border-bottom: solid #8A0808;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 10px;
+	width:270px;
+}
+
+.accountCategoryTitles{
+	font-size: 14pt;
+	font-style: bold;
+	color:#8A0808;
+}
+
+.jobMailTile{
+	margin-top:150px;
+	margin-left:350px;
+	position:absolute;
+	height:500px;
+	width:750px
+}
+
+.doubleColors{
+	margin:0px;
+	color:#8A0808;
+	font-size:12pt;
+	clear:right;
+	overflow:ellipsis;
+}
+
+.editPencil{
+	height:15px;
+	width:15px;
+	margin-left:660px;
+	position:absolute;
+}
+
+.buttonImage{
+	padding:0px;
+	height:15px;
+	width:15px;
+}
