@@ -1,7 +1,6 @@
 window.addEventListener('load', function(){
 	var meta = document.querySelector('meta[name=jobList]');
 	var jobs = meta.content;
-	console.log("meta is " + jobs);
 	if(jobs.length>0){
 		var jobArray = jobs.split("|");
 		var l = jobArray.length;
