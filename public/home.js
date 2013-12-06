@@ -32,4 +32,22 @@ window.addEventListener('load', function(){
 		}, false);
 		reqJobInfo.send(null);
 	});
-}); 
+});
+
+function handleClick() {
+    this.value = (this.value == 'Show Advanced Search Options' ? 'Hide Advanced Search Options' : 'Show Advanced Search Options');
+}
+
+$(window).scroll(function() { 
+    if ($(window).scrollTop() <= 156) { 
+        $(jobdetail).offset({top: 231});
+        $(jobdetail).css({overflow: "hidden"});
+    } else {
+        $(jobdetail).css({top: 60, bottom: 0, overflow: "scroll"});
+    }
+});
+
+function tagClick(tag) {
+    var searchbar = document.getElementsByName('searchtext')[0];
+    searchbar.value = searchbar.value + 'tag:"' + tag + '"; ';
+}

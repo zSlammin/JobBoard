@@ -8,6 +8,8 @@
     <!-- Bootstrap -->
     <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/public/jobs.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
     <script src="/public/home.js"></script>
   </head>
   
@@ -61,21 +63,21 @@
 
               <text class="criteria" style="clear:left;float:left">Popular Tags (click to add to search)</text>
               <div style="float:left;"> <!--- tag button row-->
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag ">{{tag}}</button>
-                <button class="btn btn-danger tag ">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag" value="tutoring" onclick="tagClick('tutoring')">Tutoring</button>
+                <button class="btn btn-danger tag" value="childcare" onclick="tagClick('childcare')">Childcare</button>
+                <button class="btn btn-danger tag" value="media" onclick="tagClick('media')">Media Tech</button>
+                <button class="btn btn-danger tag" value="athletics" onclick="tagClick('athletics')">Athletics</button>
               </div>
               <div style="clear:left;float:left;"> <!--- tag button row-->
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
-                <button class="btn btn-danger tag">{{tag}}</button>
+                <button class="btn btn-danger tag" value="food" onclick="tagClick('food')">Food Service</button>
+                <button class="btn btn-danger tag" value="web dev" onclick="tagClick('web dev')">Web Dev</button>
+                <button class="btn btn-danger tag" value="help desk" onclick="tagClick('help desk')">Help Desk</button>
+                <button class="btn btn-danger tag" value="research" onclick="tagClick('research')">Research</button>
               </div>
 
           </div>
           <p></p>
-          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options">
+          <input id="hide/show" type="button" class="btn btn-danger btn-small" data-toggle="collapse" data-target="#search_options" style="clear:left" value="Show Advanced Search Options" onclick="handleclick()">
           </input>
         </div>
        
@@ -90,7 +92,7 @@
           <div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px">
           </div>
       </div>
-      <div class="highlight" id="jobdetail" style="margin-left:20px;position:fixed;left:522px;top:216px;right:0px"> <!-- top was 216 job description -->
+      <div class="highlight" id="jobdetail" style="margin-left:20px;position:fixed;left:522px;top:217px;right:0px"> <!-- top was 216 job description -->
         <h3 style="float:left"><span style="color:red">{{Job Title}}</span></h3>
         <button class="btn btn-danger" style="float:left;margin:15px">Apply Here</button>
         <text class="detailheader">Job Description</text>
@@ -119,28 +121,5 @@
         <text class="detailtext">{{on/off campus}}</text>
       </div>
     </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="/public/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-      function handleClick() {
-        this.value = (this.value == 'Show Advanced Search Options' ? 'Hide Advanced Search Options' : 'Show Advanced Search Options');
-      }
-      document.getElementById('hide/show').onclick = handleClick;
-
-      $(window).scroll(function() { 
-        /*if ($(jobdetail).is(':hover') === false) {*/
-          if ($(window).scrollTop() <= 216) { 
-            $(jobdetail).offset({top: 230});
-            $(jobdetail).css({overflow: "hidden"});
-          } else {
-            $(jobdetail).css({top: 0, bottom: 0, overflow: "scroll"});
-          }
-       /* } else {
-          var top = $(window).offset().top;
-          $(window).scrollTop(top);
-          //$(jobdetail).is()
-        }*/
-      });
-    </script>
   </body>
 </html>
