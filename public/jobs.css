@@ -1,0 +1,97 @@
+/*!
+ * To override/customize bootstrap classes
+ */
+
+.border {
+    margin-top:10px;
+    margin-left:10px;
+    margin-right:10px
+}
+
+.header {
+    margin-left:20px;
+    font-family:Didot;
+    font-size:120px;
+    font-style:italic;
+    line-height:120%;
+    color:rgb(216,0,0);
+    text-align:left;
+    margin-top:65px;
+    float:left;
+}
+
+.highlight {
+    overflow: auto;
+    position: relative;
+    width: 450px;
+    padding: 17px 20px 17px 20px;
+    margin: 15px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+}
+
+.criteria {
+    line-height:200%;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.tag {
+    width: 100px;
+    margin-bottom: 5px;
+    overflow: hidden;  
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #da4f49;
+    *background-color: #bd362f;
+    background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+    background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+    background-repeat: repeat-x;
+    border-color: #bd362f #bd362f #802420;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.detailheader {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float:left;
+    clear:left;
+    font-family:"Myriad Pro";
+    font-size:14px;
+    line-height:120%;
+    font-weight:bold;
+    text-align:left;
+}
+
+.detailtext {
+    margin:10px;
+    float:left;
+    font-family:"Myriad Pro";
+    font-size:14px;
+    line-height:120%;
+    text-align:left;
+}
+
+.listbox {
+    margin-left:15px;
+    margin-right:15px;
+    border: 1px solid #DDD;
+    display: block;
+    width:450px;
+    padding:17px 20px 17px 20px;
+    color:black;
+}
+<<<<<<< HEAD:jobs.css
+
+.jobid {
+    visibility:hidden;
+}
+=======
+>>>>>>> fa57a659bb200f7dfbcfd1d39c97b534e64f9ada:public/jobs.css
