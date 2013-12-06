@@ -32,6 +32,13 @@ app.get('/', function(request, response){
 	});
 	
 });
+app.get('/jobmail', function(request, response){
+		response.render("jobmail.html");
+});
+
+app.get('/account', function(request,response){
+	response.render("studentAccount.html");
+})
 app.get('/job/:id', function(request, response){
 	response.status='200';
 	var id = request.params.id;
