@@ -15,6 +15,12 @@ window.addEventListener('load', function(){
 		$('#jobList').append(entry);
 	}
 	$(".list-group-item").click(function(){
+		var joblist = $(jobList).children();
+		for (var i=0;i<joblist.length;i++){
+			joblist[i].style.backgroundColor = "white";
+		}
+		this.style.backgroundColor = "#FF6E6E";
+		$(jobdetail).animate({scrollTop: 0}, 'medium');
 		var reqJobInfo = new XMLHttpRequest();
 		var url = '/job/' +this.id;
 		reqJobInfo.open('GET', '/job/' + this.id, true);
