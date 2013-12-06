@@ -58,6 +58,10 @@ window.addEventListener('load', function(){
 	});
 });
 
+function filter(){
+	console.log("filtering");
+}
+
 function handleClick() {
     this.value = (this.value == 'Show Advanced Search Options' ? 'Hide Advanced Search Options' : 'Show Advanced Search Options');
 }
