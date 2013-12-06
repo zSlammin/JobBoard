@@ -3,7 +3,7 @@ var app = express();
 
 var anyDB = require('any-db');
 var jobsConn = anyDB.createConnection('sqlite3://jobs.db');
-
+var infoConn = anyDB.createConnection('sqlite3://jobsinfo.db');
 var engines = require('consolidate');
 app.engine('html', engines.hogan);
 app.set('views', __dirname + "/templates");
@@ -16,6 +16,7 @@ app.get('/', function(request, response){
 	var q = "SELECT * FROM jobs";
 	var i =0;
 	var allJobs = jobsConn.query(q);
+	console.log(allJobs);
 	allJobs.on('row', function(row){
 		jobsList[i] = row;
 		i++;
@@ -42,10 +43,18 @@ app.get('/account', function(request,response){
 app.get('/job/:id', function(request, response){
 	response.status='200';
 	var id = request.params.id;
+	var q = "SELECT * FROM Jobs WHERE id="+id+"";
+	var jobInfo = infoConn.query(q);
+	var json;
+	jobInfo.on('row', function(row){
+		json = {PhoneNumber: row.PhoneNumber, WorkLocation: row.WorkLocation, EmailAddress:row.EmailAddress, PrimaryContact: row.PrimaryContact, EndDate: row.EndDate, StartDate: row.StartDate, TimeFrame: row.TimeFrame, HourlyRate: row.HourlyRate, Hours: row.Hours, Openings: row.Openings, ID: row.ID, Title:row.Title, Employer: row.Employer, DatePosted: row.DatePosted, Category: row.Category, JobType: row.JobType, JobDescription: row.JobDescription, JobRequirements: row.JobRequirements};
+	})
+	
 	//this json will be constructed out of things received from jobs database and sent
-	var json = {stuff: "things"};
-	response.json(json);
-	console.log("json response sent");
+	jobInfo.on('end', function(){
+		response.json(json);
+	});
+	
 });
 
 app.listen(8080, function(){
