@@ -23,7 +23,6 @@ app.get('/', function(request, response){
 	})
 	allJobs.on('end', function(){
 		var l = jobsList.length;
-		console.log(l);
 		var jobStr="";
 		for(var j=0; j<l; j++){
 			var row = jobsList[j];
@@ -34,7 +33,24 @@ app.get('/', function(request, response){
 	
 });
 app.get('/jobmail', function(request, response){
-		response.render("jobmail.html");
+	var jobsList = new Array();
+	var q = "SELECT * FROM jobs";
+	var i =0;
+	var allJobs = jobsConn.query(q);
+	console.log(allJobs);
+	allJobs.on('row', function(row){
+		jobsList[i] = row;
+		i++;
+	})
+	allJobs.on('end', function(){
+		var l = jobsList.length;
+		var jobStr="";
+		for(var j=0; j<l; j++){
+			var row = jobsList[j];
+			jobStr+= row.id + ";" + row.title +";" +row.hours +";" + row.rate+"|";
+		}
+		response.render("jobmail.html", {jobs: jobStr});
+	});
 });
 
 app.get('/account', function(request,response){
