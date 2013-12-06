@@ -37,93 +37,52 @@
 		<text class="header" style="float:left;margin-bottom:15px;margin-top:75px">Jobs@Brown</text>		
 		
 		<!-- Mail Filter Tile-->
-		<div style="background-color:green;display:block" class="mailFilter">
-			<div class="text" style="float:left;clear:left;margin-left:30px;margin-top:20px"> JobMail Finder: 
-			<div class="btn-group">
-				<button type="button" class="btn btn-default active">On</button>
-				<button type="button" class="btn btn-default">Off</button>
-			</div>
+		<div style="display:block" class="mailFilter">
+			<text class="criteria" style="float:left"> Min. Wage (per hour): </text>
+                <select style="float:left;width:100px;margin-left:20px">
+                  <option value="6.25">$6.25</option>
+                  <option value="7.00">$7.00</option>
+                  <option value="8.00">$8.00</option>
+                  <option value="9.00">$9.00</option>
+                  <option value="10.00">$10.00</option>
+                  <option value="11.00">$11.00</option>
+                  <option value="12.00">$12.00</option>
+                  <option value="13.00">$13.00</option>
+                  <option value="14.00">$14.00</option>
+                  <option value="15.00">$15.00</option>
+                  <option value="20.00">$20.00</option>
+                  <option value="25.00">$25.00</option>
+                  <option value="30.00">$30.00</option>
+                </select>
+
+                <text class="criteria" style="float:left"> Max Hours (per week): </text>
+                <select style="float:left;width:100px;margin-left:12px">
+                  <option value="2">2</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                </select>
+
+                <text class="criteria" style="float:left"> Location </text>
+                <select style="float:left;width:100px;margin-left:95px">
+                  <option value="N/A">N/A</option>	
+                  <option value="On-Campus">On-Campus</option>
+                  <option value="Off-Campus">Off-Campus</option>
+                </select>
+
+                <text class="criteria" style="float:left"> Brown Endorsed </text>
+                <select style="float:left;width:100px;margin-left:45px">
+                  <option value="N/A">N/A</option>	
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
 			
-			<!-- JobMail Tags to refine recommendations -->
-			<div class="text" style="float:left;clear:left;margin-top:20px;padding-bottom:15px"> JobMail Tags:
-				<button class="btn" data-toggle="button"> <strong>+</strong></button>
-			</div>
-			<!-- JobMail filters to refine recommendations-->
-			<div class="text" style="float:left;clear:left"> <h3>JobMail Filters:</h3>
-				<div class="text" style="margin-bottom:20px">Min. Wage (per hour):
-					<div class="btn-group">
-					  <button type="button" class="btn btn-danger">$0</button>
-					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-					    <span class="caret"></span>
-					    <span class="sr-only"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					    <li><a href="#">Action</a></li>
-					    <li><a href="#">Another action</a></li>
-					    <li><a href="#">Something else here</a></li>
-					    <li class="divider"></li>
-					    <li><a href="#">Separated link</a></li>
-					  </ul>
-					</div>
-					</text>
-				</div>
-
-				<div class="text" style="margin-bottom:20px">Max Hours (per week):
-					<div class="btn-group">
-					  <button type="button" class="btn btn-danger">8</button>
-					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-					    <span class="caret"></span>
-					    <span class="sr-only"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					    <li><a href="#">Action</a></li>
-					    <li><a href="#">Another action</a></li>
-					    <li><a href="#">Something else here</a></li>
-					    <li class="divider"></li>
-					    <li><a href="#">Separated link</a></li>
-					  </ul>
-					</div>
-					</text>
-				</div>
-
-				<div class="text" style="margin-bottom:20px">Location:
-					<div class="btn-group">
-					  <button type="button" class="btn btn-danger">On-Campus</button>
-					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-					    <span class="caret"></span>
-					    <span class="sr-only"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					    <li><a href="#">Action</a></li>
-					    <li><a href="#">Another action</a></li>
-					    <li><a href="#">Something else here</a></li>
-					    <li class="divider"></li>
-					    <li><a href="#">Separated link</a></li>
-					  </ul>
-					</div>
-					</text>
-				</div>
-
-				<div class="text" style="margin-bottom:20px">Brown Ednorsed:
-					<div class="btn-group">
-					  <button type="button" class="btn btn-danger">Yes</button>
-					  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-					    <span class="caret"></span>
-					    <span class="sr-only"></span>
-					  </button>
-					  <ul class="dropdown-menu" role="menu">
-					    <li><a href="#">Action</a></li>
-					    <li><a href="#">Another action</a></li>
-					    <li><a href="#">Something else here</a></li>
-					    <li class="divider"></li>
-					    <li><a href="#">Separated link</a></li>
-					  </ul>
-					</div>
-					</text>
-				</div>
-			</div>
-
-			</div>
 		</div>
 
 		<div style="float:left; " id="mailstuff">
