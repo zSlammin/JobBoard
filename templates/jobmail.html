@@ -5,7 +5,7 @@
 		<meta name="jobList" content="{{jobs}}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link href="/public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/public/jobs.css" rel="stylesheet" media="screen">
+    	<link href="/public/jobs.css" rel="stylesheet" media="screen">
 	    <link href="/public/jobsiteHelper.css" rel="stylesheet" media="screen">
 	    <script src="/public/jobmail.js"></script>
 	    <script src="http://code.jquery.com/jquery.js"></script>
@@ -71,6 +71,27 @@
 
                 <text class="criteria" style="float:left"> Max Hours (per week): </text>
                 <select style="float:left;width:100px">
+=======
+		<div style="display:block" class="mailFilter highlight">
+			<text class="criteria" style="float:left"> Min. Wage (per hour): </text>
+                <select style="float:left;width:100px;margin-left:20px">
+                  <option value="6.25">$6.25</option>
+                  <option value="7.00">$7.00</option>
+                  <option value="8.00">$8.00</option>
+                  <option value="9.00">$9.00</option>
+                  <option value="10.00">$10.00</option>
+                  <option value="11.00">$11.00</option>
+                  <option value="12.00">$12.00</option>
+                  <option value="13.00">$13.00</option>
+                  <option value="14.00">$14.00</option>
+                  <option value="15.00">$15.00</option>
+                  <option value="20.00">$20.00</option>
+                  <option value="25.00">$25.00</option>
+                  <option value="30.00">$30.00</option>
+                </select>
+
+                <text class="criteria" style="float:left"> Min Hours (per week): </text>
+                <select style="float:left;width:100px;margin-left:12px">
                   <option value="2">2</option>
                   <option value="4">4</option>
                   <option value="6">6</option>
@@ -83,22 +104,46 @@
                   <option value="20">20</option>
                 </select>
 
+                <text class="criteria" style="float:left"> Max Hours (per week): </text>
+                <select style="float:left;width:100px;margin-left:12px">
+                  <option value="2">2</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                  <option value="22">22</option>
+                  <option value="24">24</option>
+                  <option value="26">26</option>
+                  <option value="28">28</option>
+                  <option value="30">30</option>
+                  <option value="32">32</option>
+                  <option value="34">34</option>
+                  <option value="36">36</option>
+                  <option value="38">38</option>
+                  <option selected="true" value="40">40</option>
+                </select>
+
                 <text class="criteria" style="float:left"> Location </text>
-                <select style="float:left;width:100px">
-                  <option value="N/A">N/A</option>	
+                <select style="float:left;width:100px;margin-left:95px">
+                  <option value="N/A">Either</option>	
                   <option value="On-Campus">On-Campus</option>
                   <option value="Off-Campus">Off-Campus</option>
                 </select>
 
                 <text class="criteria" style="float:left"> Brown Endorsed </text>
-                <select style="float:left;width:100px">
+                <select style="float:left;width:100px;margin-left:45px">
                   <option value="N/A">N/A</option>	
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
                 </select>
 
-			</div>
-
+                <button type="button" id="filter" class="btn btn-danger" onclick="filter()" style="float:right;margin-right:30px;margin-bottom:10px">Filter</button>
+			
 		</div>
 
 		
@@ -114,34 +159,48 @@
 		    	</div>
 
 		    	
-					
-	    		<!--prev and next buttons-->
-				<ul class="pager" style="position:absolute;margin-top:60px;margin-left:5px">
-				  <li><a href="#"> Prev </a></li>
-				  <li><a href="#">Next</a></li>
-				</ul>
-				
-				<a href="#" style="position:absolute;margin-top:65px;left:330px">Inbox <span class="badge">42</span></a>
+		<div style="float:left; " id="mailstuff">
+			<!-- Static header for mail refinement-->
+			<div class="mailHeader highlight" style="float:left;display:block">
 
-				<!--dropdown menu-->
-				<div class="btn-group" style="position:absolute;margin-top:60px;right:10px">
-					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filter/Sort <span class="caret"></span></button>
-					<ul class="dropdown-menu" role="menu">
-						<li><text>Filter by:</text></li>
-						<li><a href="#">Starred</a></li>
-						<li><a href="#">Brown Endorsed</a></li>
-						<li><a href="#">On-Campus</a></li>
-						<li><text>Sort by:</text></li>
-						<li><a href="#">Best Match</a></li>
-						<li><a href="#">Most Recent</a></li>
-						<li><a href="#">Highest Wage/a></li>							  
+					<!--search bar-->
+					<div class="mailHeaderBox" style="height:25px">
+				        <form class="input-append" style="float:left;margin-top:5px">
+				          <input type="text" name="searchtext" style="width: 385px;margin-left: 5px;">
+				          <button class="btn btn-default" role="button">Search</button>
+				        </form>
+			    	</div>
+
+			    	
+						
+		    		<!--prev and next buttons-->
+					<ul class="pager" style="position:absolute;margin-top:60px;margin-left:5px">
+					  <li><a href="#"> Prev </a></li>
+					  <li><a href="#">Next</a></li>
 					</ul>
-				</div>
-			
+					
+					<a href="#" style="position:absolute;margin-top:65px;left:300px">Inbox <span class="badge">42</span></a>
 
+					<!--dropdown menu-->
+					<div class="btn-group" style="position:absolute;margin-top:60px;right:10px">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort <span class="caret"></span></button>
+						<ul class="dropdown-menu" role="menu">
+							<li><text>Filter by:</text></li>
+							<li><a href="#">Starred</a></li>
+							<li><a href="#">Brown Endorsed</a></li>
+							<li><a href="#">On-Campus</a></li>
+							<li><text>Sort by:</text></li>
+							<li><a href="#">Best Match</a></li>
+							<li><a href="#">Most Recent</a></li>
+							<li><a href="#">Highest Wage/a></li>							  
+						</ul>
+					</div>
+				
+
+			</div>
+
+			<div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px"></div>
 		</div>
-
-		<div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px"></div>
 
 		
 

@@ -13,8 +13,18 @@ window.addEventListener('load', function(){
 		var rate = vals[3];
 		var entry = '<a #href="#" id="'+ id +'"" class="list-group-item listbox"><h4 class="list-group-item-heading">'+title+'</h4><p class="list-group-item-text">'+hours+' hours per week || '+rate+'</p></a>';
 		$('#jobList').append(entry);
+		if(i==0){
+			console.log("HERE")
+			$("#"+id).css('background-color', '#FF6E6E');
+		}
 	}
 	$(".list-group-item").click(function(){
+		var joblist = $(jobList).children();
+		for (var i=0;i<joblist.length;i++){
+			joblist[i].style.backgroundColor = "white";
+		}
+		this.style.backgroundColor = "#FF6E6E";
+		$(jobdetail).animate({scrollTop: 0}, 'medium');	
 		var reqJobInfo = new XMLHttpRequest();
 		var url = '/job/' +this.id;
 		reqJobInfo.open('GET', '/job/' + this.id, true);
@@ -40,6 +50,7 @@ window.addEventListener('load', function(){
 				$("#JobTitle").text(data.Title);
 				$("#JobTitle").css("color","red");
 
+
 			}else{
 				alert("job info request failed");
 			}
@@ -47,6 +58,10 @@ window.addEventListener('load', function(){
 		reqJobInfo.send(null);
 	});
 });
+
+function filter(){
+	console.log("filtering");
+}
 
 function handleClick() {
     this.value = (this.value == 'Show Advanced Search Options' ? 'Hide Advanced Search Options' : 'Show Advanced Search Options');
@@ -78,4 +93,8 @@ function athletics() {
 	$('html,body').animate({
         scrollTop: ($(joblist).offset().top)},
         'medium');
+}
+
+function applynow() {
+	window.open("https://studentemployment.brown.edu/JobX_Apply.aspx?JobId=102");
 }

@@ -40,26 +40,37 @@
 }
 
 .mailHeader{
+	margin-top:0px;
 	position:relative;
+<<<<<<< HEAD
 	right:0px;
 	border-right: 2px solid;
 	border:2px solid;
 	border-bottom: 0px;
+=======
+	margin-left:15px;
+>>>>>>> 5230bc96ebae4b089e688fe371206e188c6e5dda
 	height:100px;
-	width:750px;
+	width:479px;
 	float:left;
 	padding:5px;
-	background-color: #508FE1;
 }
 
 .mailFilter{
+<<<<<<< HEAD
 	position:relative;
 	margin-top:250px;
 	margin-left:30px;
 	height:300px;
+=======
+	clear:left;
+	float:left;
+	position:relative;
+	margin-top:0px;
+	margin-left:20px;
+>>>>>>> 5230bc96ebae4b089e688fe371206e188c6e5dda
 	width:300px;
-	border:2px solid;
-	border-right:0px;
+	overflow:auto;
 }
 
 .jobSuggestions{
