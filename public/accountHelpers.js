@@ -1,5 +1,11 @@
 var first = new Boolean(true);
 
+function signIn(){
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	
+}
+
 function experienceEdit(){
 	if (first){
 		var x = document.getElementById('changes1');

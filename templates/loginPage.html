@@ -33,9 +33,13 @@
     <text class="header" style="float:left;margin-bottom:15px;margin-top:75px">Jobs@Brown</text>
 
     <!-- login window -->
-    <div class="loginTitle">
-    	<text style="font-style:oblique">Email: </text>
-    	<text style="font-style:oblique">PAssword: </text>
+    <div class="loginTile">
+    	<FORM NAME="myform" ACTION="" METHOD="GET">
+			<h3 style="text-align:center">Log In to the Brown Student Employment Site</h3>
+			<INPUT TYPE="text" id="username" placeholder="Email" VALUE="" style="margin-top:25px;width:350px;float:right;margin-right:15px"><P>
+			<INPUT type="password" id="password" placeholder="Password" value="" style="width:350px;float:right;margin-right:15px"><P>
+			<INPUT class="btn btn-default" TYPE="submit" NAME="button" Value="Sign In" style="float:right;margin-right:15px;margin-top:15px" onClick="signIn()">
+		</FORM>
     </div>
 
 
