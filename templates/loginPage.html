@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<title>Jobs@Brown</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,5 +9,36 @@
 	    <link href="/public/jobsiteHelper.css" rel="stylesheet" media="screen">
 	    <script src="/public/accountHelpers.js"></script>
 	</head>
-	<body></body>
+
+	<body>
+		<!-- Static navbar on top of page -->
+		<div class="navbar navbar-inverse navbar-fixed-top" style="background:black"role="naviagtion">
+      <div class="border" style="position:relative">
+        <div class="navbar-header">
+          <ul class="nav">
+            <li><a href="/">jobs@Brown</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="nav navbar-nav pull-right" style="position:relative">
+          <ul class="nav">
+            <li><a href="/homeNoUser">JobFinder</a></li>
+            <li class="active"><a href="/login">SignIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <text class="header" style="float:left;margin-bottom:15px;margin-top:75px">Jobs@Brown</text>
+
+    <!-- login window -->
+    <div class="loginTitle">
+    	<text style="font-style:oblique">Email: </text>
+    	<text style="font-style:oblique">PAssword: </text>
+    </div>
+
+
+	</body>
+
 </html>

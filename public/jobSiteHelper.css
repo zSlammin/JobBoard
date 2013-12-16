@@ -19,6 +19,15 @@
     margin-bottom:20px;
 }
 
+.loginTile{
+	position : relative;
+	margin-left : 15px;
+	padding : 5px;
+	float:left;
+	height:500px;
+	width:700px;
+}
+
 .mailHeaderBox{
 	position:relative;
 	margin-bottom:15px;
