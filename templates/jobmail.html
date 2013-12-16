@@ -27,18 +27,17 @@
 						<li><a href="/">JobFinder</a></li>
 			            <li><a href="/account">MyAccount</a></li>
 			            <li class="active"><a href="/jobmail">JobMail</a></li>
-			            <li><a href="/logout">LogOut</a></li>
+			            <li><a href="/login">LogOut</a></li>
 					</ul>
 				</div>
 			</div>
-		</div>
-		
-		<!-- jobs@Brown Title-->
-		<text class="header" style="float:left;margin-bottom:15px;margin-top:75px">Jobs@Brown</text>		
+		</div>		
 		
 		<!-- Mail Filter Tile-->
-		<div class="mailFilter">
-			<div class="text" style="float:left;clear:left;margin-left:30px;margin-top:20px"> JobMail Finder: 
+		<div class="prof_tile">
+			<h3>JobMail Preferences:</h3>
+
+			<div class="text" style="float:left;clear:left;margin-top:20px"> JobMail Notifications: 
 				<div class="btn-group">
 					<button type="button" class="btn btn-default">On</button>
 					<button type="button" class="btn btn-default">Off</button>
@@ -50,118 +49,70 @@
 				<button class="btn" data-toggle="button"> <strong>+</strong></button>
 			</div>
 			<!-- JobMail filters to refine recommendations-->
-			<div class="text" style="float:left;clear:left"> <h3>JobMail Filters:</h3>
+			<div class="text" style="float:left;clear:left;margin-top:15px"> <h4>JobMail Filters:</h4>
+				<div style="display:block" class="mailFilter">
+					<text class="criteria" style="float:left"> Min. Wage (per hour): </text>
+	                <select style="float:right;width:100px">
+	                  <option value="7.25">$7.25</option>
+	                  <option value="8.00">$8.00</option>
+	                  <option value="9.00">$9.00</option>
+	                  <option value="10.00">$10.00</option>
+	                  <option value="11.00">$11.00</option>
+	                  <option value="12.00">$12.00</option>
+	                  <option value="13.00">$13.00</option>
+	                  <option value="14.00">$14.00</option>
+	                  <option value="15.00">$15.00</option>
+	                  <option value="20.00">$20.00</option>
+	                  <option value="25.00">$25.00</option>
+	                  <option value="30.00">$30.00</option>
+	                  <option value="35.00">$35.00</option>
+	                </select>
 
-				<text class="criteria" style="float:left"> Min. Wage (per hour): </text>
-                <select style="float:left;width:100px">
-                  <option value="6.25">$6.25</option>
-                  <option value="7.00">$7.00</option>
-                  <option value="8.00">$8.00</option>
-                  <option value="9.00">$9.00</option>
-                  <option value="10.00">$10.00</option>
-                  <option value="11.00">$11.00</option>
-                  <option value="12.00">$12.00</option>
-                  <option value="13.00">$13.00</option>
-                  <option value="14.00">$14.00</option>
-                  <option value="15.00">$15.00</option>
-                  <option value="20.00">$20.00</option>
-                  <option value="25.00">$25.00</option>
-                  <option value="30.00">$30.00</option>
-                </select>
+	                <text class="criteria" style="float:left;clear:right"> Max Hours (per week): </text>
+	                <select style="float:right;width:60px;margin-left:12px">
+	                  <option value="2">2</option>
+	                  <option value="4">4</option>
+	                  <option value="6">6</option>
+	                  <option value="8">8</option>
+	                  <option value="10">10</option>
+	                  <option value="12">12</option>
+	                  <option value="14">14</option>
+	                  <option value="16">16</option>
+	                  <option value="18">18</option>
+	                  <option value="20">20</option>
+	                </select>
 
-                <text class="criteria" style="float:left"> Max Hours (per week): </text>
-                <select style="float:left;width:100px">
-=======
-		<div style="display:block" class="mailFilter highlight">
-			<text class="criteria" style="float:left"> Min. Wage (per hour): </text>
-                <select style="float:left;width:100px;margin-left:20px">
-                  <option value="6.25">$6.25</option>
-                  <option value="7.00">$7.00</option>
-                  <option value="8.00">$8.00</option>
-                  <option value="9.00">$9.00</option>
-                  <option value="10.00">$10.00</option>
-                  <option value="11.00">$11.00</option>
-                  <option value="12.00">$12.00</option>
-                  <option value="13.00">$13.00</option>
-                  <option value="14.00">$14.00</option>
-                  <option value="15.00">$15.00</option>
-                  <option value="20.00">$20.00</option>
-                  <option value="25.00">$25.00</option>
-                  <option value="30.00">$30.00</option>
-                </select>
+	                <text class="criteria" style="float:left;clear:right"> Location </text>
+	                <select style="float:right;width:130px">
+	                  <option value="N/A">No Preference</option>	
+	                  <option value="On-Campus">On-Campus</option>
+	                  <option value="Off-Campus">Off-Campus</option>
+	                </select>
 
-                <text class="criteria" style="float:left"> Min Hours (per week): </text>
-                <select style="float:left;width:100px;margin-left:12px">
-                  <option value="2">2</option>
-                  <option value="4">4</option>
-                  <option value="6">6</option>
-                  <option value="8">8</option>
-                  <option value="10">10</option>
-                  <option value="12">12</option>
-                  <option value="14">14</option>
-                  <option value="16">16</option>
-                  <option value="18">18</option>
-                  <option value="20">20</option>
-                </select>
+	                <text class="criteria" style="float:left;clear:right"> Brown Endorsed </text>
+	                <select style="float:right;width:100px;margin-left:45px">
+	                  <option value="N/A">N/A</option>	
+	                  <option value="Yes">Yes</option>
+	                  <option value="No">No</option>
+	                </select>
+				</div>
 
-                <text class="criteria" style="float:left"> Max Hours (per week): </text>
-                <select style="float:left;width:100px;margin-left:12px">
-                  <option value="2">2</option>
-                  <option value="4">4</option>
-                  <option value="6">6</option>
-                  <option value="8">8</option>
-                  <option value="10">10</option>
-                  <option value="12">12</option>
-                  <option value="14">14</option>
-                  <option value="16">16</option>
-                  <option value="18">18</option>
-                  <option value="20">20</option>
-                  <option value="22">22</option>
-                  <option value="24">24</option>
-                  <option value="26">26</option>
-                  <option value="28">28</option>
-                  <option value="30">30</option>
-                  <option value="32">32</option>
-                  <option value="34">34</option>
-                  <option value="36">36</option>
-                  <option value="38">38</option>
-                  <option selected="true" value="40">40</option>
-                </select>
-
-                <text class="criteria" style="float:left"> Location </text>
-                <select style="float:left;width:100px;margin-left:95px">
-                  <option value="N/A">Either</option>	
-                  <option value="On-Campus">On-Campus</option>
-                  <option value="Off-Campus">Off-Campus</option>
-                </select>
-
-                <text class="criteria" style="float:left"> Brown Endorsed </text>
-                <select style="float:left;width:100px;margin-left:45px">
-                  <option value="N/A">N/A</option>	
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-
-                <button type="button" id="filter" class="btn btn-danger" onclick="filter()" style="float:right;margin-right:30px;margin-bottom:10px">Filter</button>
-			
+	                <button type="button" id="filter" class="btn btn-danger" onclick="filter()" style="float:right;margin-top:30px">Apply</button>
+				
+				
+			</div>
 		</div>
 
 		
 		<!-- Static header for mail refinement-->
-		<div class="mailHeader" style"right:0px">
+		<div class="tile right_tile" style="margin-top:90px">
+		    	<h3>Suggestions for You:</h3>
 
-				<!--search bar-->
-				<div class="mailHeaderBox" style="height:25px">
-			        <form class="input-append" style="float:left">
-			          <input type="text" name="searchtext" style="width:450px">
-			          <button class="btn btn-default" role="button">Search</button>
-			        </form>
-		    	</div>
+<!-- Figure out way to display user's name to replace "You" -->
 
-		    	
-		<div style="float:left; " id="mailstuff">
+			<div style="float:left;clear:left" id="mailstuff">
 			<!-- Static header for mail refinement-->
-			<div class="mailHeader highlight" style="float:left;display:block">
+				<div class="mailHeader highlight" style="float:left;display:block">
 
 					<!--search bar-->
 					<div class="mailHeaderBox" style="height:25px">
@@ -197,6 +148,7 @@
 					</div>
 				
 
+				</div>
 			</div>
 
 			<div id="jobList" class="list-group" style="float:left;clear:left;overflow:scroll;margin-top:6px"></div>

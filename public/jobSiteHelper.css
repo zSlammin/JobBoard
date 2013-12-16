@@ -8,6 +8,15 @@
 	vertical-align: middle;
 }
 
+.aboutBox{
+	overflow: auto;
+	position:absolute;
+	margin-top:100px;
+	margin-right:25px;
+	margin-left:25px;
+	padding:5px;
+}
+
 .tile {
     overflow: auto;
     position: relative;
@@ -38,29 +47,11 @@
 	padding-right:30px;
 }
 
-.jobMailTile{
-	position:relative;
-	margin-left:332px;
-	border-right: 2px solid;
-	border:2px solid;
-	border-bottom: 0px;
-	height:500px;
-	width:760px;
-	float:left;
-	padding:5px;
-}
-
 .mailHeader{
-	margin-top:0px;
+	margin-bottom:0px;
 	position:relative;
-<<<<<<< HEAD
-	right:0px;
-	border-right: 2px solid;
-	border:2px solid;
 	border-bottom: 0px;
-=======
 	margin-left:15px;
->>>>>>> 5230bc96ebae4b089e688fe371206e188c6e5dda
 	height:100px;
 	width:479px;
 	float:left;
@@ -68,18 +59,10 @@
 }
 
 .mailFilter{
-<<<<<<< HEAD
-	position:relative;
-	margin-top:250px;
-	margin-left:30px;
-	height:300px;
-=======
 	clear:left;
 	float:left;
 	position:relative;
 	margin-top:0px;
-	margin-left:20px;
->>>>>>> 5230bc96ebae4b089e688fe371206e188c6e5dda
 	width:300px;
 	overflow:auto;
 }
@@ -91,9 +74,24 @@
 .right_tile {
 	width: 700px;
 	color: #900000;
-	margin-left: 420px;
+	margin-left: 410px;
 	position:relative;
+	margin-top:10px;
 }
+
+.prof_tile {
+    overflow: auto;
+    position: absolute;
+    float:left;
+    width: 300px;
+    padding: 5px 20px 17px 20px;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    margin-left:50px;
+    margin-top:0px;
+}
+
 
 .bottomBorder{
 	border-bottom: solid rgb(216,0,0);
