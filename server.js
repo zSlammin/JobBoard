@@ -88,9 +88,14 @@ app.get('/login', function(request,response){
 	response.render("loginPage.html");
 })
 
-//get about page
+//get about page without account logged in
 app.get('/about', function(request,response){
 	response.render("about.html");
+})
+
+//get about page with active user account (not logged in)
+app.get('/aboutNoUser', function(request,response){
+	response.render("aboutWOUser.html");
 })
 
 //get job data
