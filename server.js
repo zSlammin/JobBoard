@@ -80,6 +80,7 @@ app.get('/jobmail', function(request, response){
 
 //get user student account page
 app.get('/account', function(request,response){
+	console.log("renderign account");
 	response.render("studentAccount.html");
 })
 

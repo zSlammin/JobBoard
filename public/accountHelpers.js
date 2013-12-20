@@ -1,9 +1,14 @@
 var first = new Boolean(true);
 
 function signIn(){
-	var email = document.getElementById('email').value;
-	var password = document.getElementById('password').value;
-	
+	//var email = document.getElementById('email').value;
+	//var password = document.getElementById('password').value;
+	var xmlHttp = null;
+	console.log("here");
+  xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", '/account', false );
+  xmlHttp.send( null );
+  return xmlHttp.responseText;
 }
 
 function experienceEdit(){
