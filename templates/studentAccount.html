@@ -42,11 +42,9 @@
         	<div class="profPic">
 				<img style="height:240px;width:240px;margin-top:5px;margin-left:5px" src="https://scontent-a-iad.xx.fbcdn.net/hphotos-ash3/1475885_10151718204156853_117853121_n.jpg">
 			</div>
-			<div style="float:right">
-				<text style="font-size:12pt;font-weight:normal"> Edit Profile <button class="btn btn-default" style="shadow:0px"> <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button></text>
-			</div>
+			
 
-		<div class="doubleColors">
+		<div class="doubleColors" style="margin-top:20px">
 		<text> Name: <text style="color:black;font-weight:normal">Johnny Bananas</text></text></div>
 
 		<div class="doubleColors">
@@ -79,7 +77,7 @@
 	<div class="tile right_tile" style="margin-top:90px">
 		
 		
-			<button onclick="experienceEdit()" class="btn btn-default" style="float:right;margin-top" > <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
+			<button onclick="experienceEdit()" class="btn btn-default" id="editButton" style="float:right;margin-top" > <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
 		<div class="bottomBorder">
 			<div class="accountCategoryTitles">
 				<text>Experience</text>
@@ -139,15 +137,18 @@
 	</div>
 
 	<div class="tile right_tile">
-		<button class="btn btn-default" style="float:right;margin-top"> <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
+		<button class="btn btn-default" onclick="editReference()" style="float:right;margin-top"> <img style="height:15px;width:15px" src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-10/512/Pencil-icon.png"></button>
 		<div class="bottomBorder">
 			<div class="accountCategoryTitles">
 				<text>References</text>
 			</div>
 		</div>
-		<p style="text-style:strong;margin-top:10px">Lawrence Gibbs, Research Institute of Dakota</p>
-		<p style="text-indent:35px;margin-top:20px;color:black"> Johnny worked for me as an intern in the summer of '69. It was the best of times and the worst of times, but not both. He is very smart and engaging and whatnot. Sometimes he would pretend to do work and would look at me to see if I noticed. Even though I always did, I did not mind because I was slacking off myself. This is not a good recommendation, but it takes up a lot of space and looks pretty. I am an advocate of aesthetics. Hurray UI. Hurray Johnny!</p>
-	</div>
+		<div id="reference">
+			<div id="changes3">
+			<p style="text-style:strong;margin-top:10px">Lawrence Gibbs, Research Institute of Dakota</p>
+			<p style="text-indent:35px;margin-top:20px;color:black"> Johnny worked for me as an intern in the summer of '69. It was the best of times and the worst of times, but not both. He is very smart and engaging and whatnot. Sometimes he would pretend to do work and would look at me to see if I noticed. Even though I always did, I did not mind because I was slacking off myself. This is not a good recommendation, but it takes up a lot of space and looks pretty. I am an advocate of aesthetics. Hurray UI. Hurray Johnny!</p>
+			</div>
+		</div>
 
 	</body>
 </html>

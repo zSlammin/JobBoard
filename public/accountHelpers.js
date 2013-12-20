@@ -15,7 +15,7 @@ function experienceEdit(){
 	if (first){
 		var x = document.getElementById('changes1');
 		x.parentNode.removeChild(x);
-	
+
 		document.getElementById("experience").innerHTML=
 		"<button class=\"btn btn-default\" style=\"float:right\">Delete</button><p>Position Title (date): <textarea rows=\"1\" id=\"title1\" style=\"resize:none;width:400px\"> Brown Group Tutor (2011 – Present)</textarea></p><p>Description: <textarea rows=\"10\" id=\"description1\" style=\"resize:none;width:400px\">Instruct underclassmen in various math, statistics and economics courses. Tutor both individuals and groups of students.</textarea></p><button class=\"btn btn-default\" style=\"float:right\" onclick=\"deleteExperience()\">Delete</button><p>Position Title (date): <textarea rows=\"1\" id=\"title2\" style=\"resize:none;width:400px\"> The Princeton Review, SAT Instructor (Summer 2010)</textarea></p><p>Description: <textarea rows=\"10\" id=\"description2\" style=\"resize:none;width:400px\">Served as a classroom instructor and private tutor for this national test preparation company. Completed a rigorous certification/training program led by Princeton Review professionals. Led SAT prep classes and provided private instruction to students in the Bronx, NY.</textarea></p><p>Position Title (date): <textarea rows=\"1\" id=\"title3\" style=\"resize:none;width:400px\"></textarea></p><p>Description: <textarea rows=\"10\" id=\"description3\" style=\"resize:none;width:400px\"></textarea></p><button class=\"btn btn-default\" onclick=\"experienceUpdate()\">Submit</button>";
 	} else {
@@ -32,6 +32,28 @@ function experienceEdit(){
 		document.getElementById("experience").innerHTML= 
 		"<button class=\"btn btn-default\" style=\"float:right\">Delete</button><p>Position Title (date): <textarea rows=\"1\" id=\"title1\" style=\"resize:none;width:400px\">" + title1 + "</textarea></p><p>Description: <textarea rows=\"10\" id=\"description1\" style=\"resize:none;width:400px\">"+description1+"</textarea></p><button class=\"btn btn-default\" style=\"float:right\">Delete</button><p>Position Title (date): <textarea rows=\"1\" id=\"title2\" style=\"resize:none;width:400px\">"+title2+"</textarea></p><p>Description: <textarea rows=\"10\" id=\"description2\" style=\"resize:none;width:400px\">"+description2+"</textarea></p><button class=\"btn btn-default\" style=\"float:right\" onclick=\"deleteExperience()\">Delete</button><p>Position Title (date): <textarea rows=\"1\" id=\"title3\" style=\"resize:none;width:400px\">"+title3+"</textarea></p><p>Description: <textarea rows=\"10\" id=\"description3\" style=\"resize:none;width:400px\">"+description3+"</textarea></p></textarea></p><p>Position Title (date): <textarea rows=\"1\" id=\"title4\" style=\"resize:none;width:400px\"></textarea></p><p>Description: <textarea rows=\"10\" id=\"description4\" style=\"resize:none;width:400px\"></textarea></p><button class=\"btn btn-default\" onclick=\"experienceUpdate()\">Submit</button>";
 	}
+}
+
+function editReference(){
+	var x = document.getElementById('changes3');
+	x.parentNode.removeChild(x);
+
+	document.getElementById('reference').innerHTML = 
+		"<button class=\"btn btn-default\" style=\"float:right\">Delete</button><p>Reference/Position/Place: <textarea rows=\"1\" id=\"Title1\" style=\"resize:none;width:600px\"> Lawrence Gibbs, Research Institute of Dakota </textarea></p><p>Body Text: <textarea rows=\"10\" id=\"Description1\" style=\"resize:none;width:600px\">Johnny worked for me as an intern in the summer of '69. It was the best of times and the worst of times, but not both. He is very smart and engaging and whatnot. Sometimes he would pretend to do work and would look at me to see if I noticed. Even though I always did, I did not mind because I was slacking off myself. This is not a good recommendation, but it takes up a lot of space and looks pretty. I am an advocate of aesthetics. Hurray UI. Hurray Johnny!</textarea></p><button class=\"btn btn-default\" style=\"float:right\">Delete</button><p>Reference/Position/Place: <textarea rows=\"1\" id=\"Title2\" style=\"resize:none;width:600px\"> </textarea></p><p>Body Text: <textarea rows=\"10\" id=\"Description2\" style=\"resize:none;width:600px\"></textarea></p><button class=\"btn btn-default\" onclick=\"updateReference()\">Submit</button>";
+}
+
+function updateReference(){
+
+	var title1 = document.getElementById('Title1').value;
+	var title2 = document.getElementById('Title2').value;
+	var body1 = document.getElementById('Description1').value;
+	var body2 = document.getElementById('Description2').value;
+	
+	document.getElementById('reference').innerHTML = 
+	"<p style=\"text-style:strong;margin-top:10px\">"+title1+"</p>"+
+	"<p style=\"text-indent:35px;margin-top:20px;color:black\">"+body1+"</p>"+
+	"<p style=\"text-style:strong;margin-top:25px\">"+title2+"</p>"+
+	"<p style=\"text-indent:35px;margin-top:20px;color:black\">"+body2+"</p>";
 }
 
 function deleteExperience(){
